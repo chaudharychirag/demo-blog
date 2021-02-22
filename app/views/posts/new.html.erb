@@ -14,7 +14,7 @@
 		<div>
 			<%= form.label :title %><br>
 			<%= form.text_field :title %>
-			<%= @post.error.full_messages_for(:title).each do | message | %>
+			<% @post.errors.full_messages_for(:title).each do | message | %>
 			<div><%= message %></div>
 			<% end %>
 		</div>
@@ -22,12 +22,12 @@
 		<div>
 			<%= form.label :body%><br>
 			<%= form.text_field :body %>
-			<%= @post.error.full_messages_for(:body).each do | message | %>
+			<% @post.errors.full_messages_for(:body).each do | message | %>
 			<div><%= message %></div>
 			<% end %>
 		</div>
 		<br><br>
-		<div>
+		<div class="">
 			<%= form.submit %>
 		</div>
 
