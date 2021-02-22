@@ -28,3 +28,12 @@
 				data: {confirm: "Are You Sure ?"}			
 		 %>
 </button>
+
+<br><br>
+
+<h2>Comments</h2>
+<%= render @post.comments%>
+
+<h2>Add Comment</h2>
+
+<%= render 'comments/form' %>
