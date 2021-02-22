@@ -1,0 +1,33 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<div class="container">
+<%= form_with model: post do |form| %>
+
+	<div>
+		<%= form.label :title %><br>
+		<%= form.text_field :title %>
+		<% post.errors.full_messages_for(:title).each do |message| %>
+			<div><%= message %></div>
+		<% end %>	
+	</div>
+	<div>
+		<%= form.label :body %><br>
+		<%= form.text_field :body %>
+		<% post.errors.full_messages_for(:body).each do |message| %>
+			<div><%= message %></div>
+		<% end %>	
+	</div>
+	<br><br>
+	<div>
+		<%= form.submit %>
+	</div>
+
+<% end %>
+
+</div>
